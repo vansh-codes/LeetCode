@@ -8,7 +8,7 @@ public:
             if(i<sentence.size()-1 && sentence[i+1]==' '){
                 prevChar = sentence[i];
             }
-            else if(i>0 && sentence[i-1]==' ' && sentence[i]!=prevChar)
+            else if(i>0 && sentence[i]==' ' && sentence[i+1]!=prevChar)
                 return false;
         }
         return true;
