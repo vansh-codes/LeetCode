@@ -1,14 +1,13 @@
 class Solution {
 public:
     bool rotateString(string s, string goal) {
-        if (s.length() != goal.length()) return false;
+        if (s.size() != goal.size()) return false;
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.size(); i++) {
             bool isRotationPossible = true;
 
-            for (int j = 0; j < s.length(); j++) {
-                // Use modulo operator to handle rotation
-                if (goal[(i + j) % goal.length()] != s[j]) {
+            for (int j = 0; j < s.size(); j++) {
+                if (goal[(i + j) % goal.size()] != s[j]) {
                     isRotationPossible = false;
                     break;
                 }
