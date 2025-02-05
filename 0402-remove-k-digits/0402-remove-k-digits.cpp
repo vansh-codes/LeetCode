@@ -5,8 +5,7 @@ public:
             return "0";
         stack<char> st;
         for (int i = 0; i < num.size(); i++) {
-            while (!st.empty() && (st.top()-'0') > (num[i]-'0') && k>0) {
-                cout<<"pop: "<<st.top()<<endl;
+            while (!st.empty() && st.top() > num[i] && k>0) {
                 st.pop();
                 k--;
             }
