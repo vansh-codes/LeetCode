@@ -19,12 +19,28 @@ private:
     }
 
 public:
-    bool canJump(vector<int>& nums) {
+// DP solution
+    /* bool canJump(vector<int>& nums) {
         if (nums.size() == 1)
             return true;
         if (nums[0] == 0 && nums.size() > 1)
             return false;
         vector<int>dp(nums.size(), - 1);
         return canYouReach(0, nums, dp);
+    } */
+
+    // Optimal Greedy Solution
+    bool canJump(vector<int>& nums) {
+        if (nums.size() == 1)
+            return true;
+        if (nums[0] == 0 && nums.size() > 1)
+            return false;
+        int maxIndex = 0;
+        for(int i=0;i<nums.size();i++){
+            if(maxIndex>=nums.size()-1) return true;
+            maxIndex = max(maxIndex, i+nums[i]);
+            if(maxIndex==i) return false;
+        }
+        return false;
     }
 };
