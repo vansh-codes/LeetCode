@@ -30,4 +30,4 @@ Check out my progress and challenge submissions on my LeetCode profile: [LeetCod
 
 - [LeetHub](https://chromewebstore.google.com/detail/leethub-v3/kdkgpjpenaeoodajljkflmlnkoihkmda?hl=en) - For making it easier to manage and track my LeetCode solutions effortlessly!
 
-**Happy coding! 🎉**
+**Happy coding!! 🎉**
